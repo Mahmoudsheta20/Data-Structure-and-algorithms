@@ -1,8 +1,9 @@
 const swap = (arr, min, i) => {
-    let temp = arr[min]
-    arr[min] = arr[i]
-    arr[i] = temp
-
+    // sugar syntax 
+    [arr[i], arr[min]] = [arr[min], arr[i]]
+    // let temp = arr[min]
+    // arr[min] = arr[i]
+    // arr[i] = temp
 }
 
 

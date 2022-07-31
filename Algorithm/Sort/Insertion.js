@@ -1,16 +1,17 @@
 const Insertion = (arr, len) => {
     let key, j, i;
-    for (i = 1; i < len; i++) {
+    for (i = 1; i < len; i++) { //80 | 90 60 30 50 70 40
 
-        key = arr[i]
-        j = i - 1
+        key = arr[i] //90
+        j = i - 1 //0
 
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j]
+        while (j >= 0 && arr[j] > key) { // if Check condition
+
+            arr[j + 1] = arr[j] 
             j = j - 1
 
         }
-        arr[j + 1] = key
+        arr[j + 1] = key // if dont condition   arr[1] = 90
 
     }
     return arr
@@ -19,5 +20,5 @@ const Insertion = (arr, len) => {
 
 }
 
-let arr = [5, 6, 8, 9, 21, 4, 6, 3]
+let arr = [80, 90, 60, 9, 21, 4, 6, 3]
 console.log(Insertion(arr, arr.length))
